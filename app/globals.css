@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+.loader {
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    background: currentColor;
+    color: #FFF;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.3s linear infinite alternate;
+}
+
+.loader::after,
+.loader::before {
+    content: '';
+    width: 8px;
+    height: 40px;
+    border-radius: 4px;
+    background: currentColor;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+    box-sizing: border-box;
+    animation: animloader 0.3s 0.45s linear infinite alternate;
+}
+
+.loader::before {
+    left: -20px;
+    animation-delay: 0s;
+}
+
+@keyframes animloader {
+    0% {
+        height: 48px
+    }
+
+    100% {
+        height: 4px
+    }
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.blur2 {
+    backdrop-filter: blur(20px);
+}
+
+.qulaylik {
+    min-height: max-content;
+    background: red;
+}
+
+body {
+    background-image: url("/wallpapersden.com_football-field-lawn-gate_3840x2400.jpg");
+    width: 100%;
+    min-height: max-content;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: max-content;
+    background: rgb(0, 0, 0, 0.7);
+    z-index: -1;
+}
+
+.green-border {
+    border: 2px solid #019879;
+}
+
+.qora_element {
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.qora_element_2 {
+    background: rgb(0, 0, 0, 0.7);
+    width: 100%;
+    min-height: max-content;
+}
+
+
+.container {
+    max-width: 1450px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 100px;
+}
+
+.element-1 {
+    background: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 120vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card {
+    border-radius: 8px;
+    border: .7px solid rgba(255, 255, 255, 0.488);
+    backdrop-filter: blur(25px);
+}
+
+.blur {
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.green {
+    background: #019879;
+    border-radius: 6px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 5px;
+}
+
+.blur2 {
+    backdrop-filter: blur(10px);
+}
+
+.add_topic_text {
+    position: relative;
+}
+
+.add_topic_text::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    border-top: 5px solid red;
+    border-right: 5px solid red;
+    border-bottom: none;
+    border-left: none;
+    width: 50px;
+    height: 50px;
+}
+
+.shrift {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+select option {
+    background: black;
+}
+
+.add_topic_text::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    border-bottom: 5px solid red;
+    border-left: 5px solid red;
+    /* border-bottom: none; */
+    /* border-left: none; */
+    width: 50px;
+    height: 50px;
+}
+
+.element-1 {
+    position: relative;
+}
+
+.element-2 {
+    position: relative;
+}
+
+.element-1::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: -200px;
+    left: -200px;
+    box-shadow: 100px 200px 1000px rgba(0, 0, 255, 0.654);
+    background: transparent;
+}
+
+/* 
+body::after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 100px 100px 100px white;
+    backdrop-filter: blur(10px);
+} */
+
+
+@media (min-width: 200px) and (max-width: 400px) {
+    .container {
+        padding: 5px 5px;
+    }
+
+
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .blur {
+        backdrop-filter: blur(10px);
+        height: 120vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .add_topic_text::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -10px;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .add_topic_text::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: none;
+        border-left: none;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px) {
+    .container {
+        padding: 5px 15px;
+    }
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 105vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .blur {
+        backdrop-filter: blur(10px);
+        height: 120vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .add_topic_text::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -10px;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar a {
+        font-size: 15px;
+        padding: 4px;
+    }
+
+    .add_topic_text::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: none;
+        border-left: none;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+@media (min-width: 500px) and (max-width: 800px) {
+    .container {
+        padding: 8px 20px;
+    }
+
+    .blur {
+        backdrop-filter: blur(10px);
+        height: 120vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar a {
+        font-size: 17px;
+    }
+
+    .add_topic_text::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -10px;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .add_topic_text::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: none;
+        border-left: none;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    .container {
+        padding: 10px 25px;
+    }
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 130vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 250vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .navbar_nav {
+        gap: 15px;
+    }
+
+    .add_topic_text::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -10px;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .add_topic_text::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: none;
+        border-left: none;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1300px) {
+    .container {
+        padding: 10px 25px;
+    }
+
+    .element-1 {
+        background: rgb(0, 0, 0, 0.8);
+        width: 100%;
+        height: 200vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar a {
+        font-size: 20px;
+    }
+
+    .navbar_nav {
+        gap: 15px;
+    }
+
+    .add_topic_text::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: -10px;
+        border-bottom: 3px solid red;
+        border-left: 3px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .add_topic_text::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: -10px;
+        border-top: 3px solid red;
+        border-right: 3px solid red;
+        border-bottom: none;
+        border-left: none;
+        width: 50px;
+        height: 50px;
+    }
+}
